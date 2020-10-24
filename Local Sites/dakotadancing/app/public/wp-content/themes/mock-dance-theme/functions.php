@@ -7,6 +7,8 @@ function dancing_files() {
 
 function dance_features() {
     add_theme_support('title-tag');
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    register_nav_menu('footerMenuLocation', 'Footer Menu Location');
 }
 
 add_action('wp_enqueue_scripts', 'dancing_files');
