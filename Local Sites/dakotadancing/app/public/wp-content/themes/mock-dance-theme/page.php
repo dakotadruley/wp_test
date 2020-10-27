@@ -18,7 +18,6 @@ while(have_posts()) {
 <!-- get the id of the current page we are viewing, then look up the id of it's parent page -->
   <?php 
   $theParent = wp_get_post_parent_id(get_the_ID());
-
   if ($theParent) { ?>
       
       <div class="metabox metabox--position-up metabox--with-home-link">
