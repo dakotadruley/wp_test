@@ -678,22 +678,22 @@ Version: 1.0
       position: relative;
     }
   .btn--orange {
-      background-color: #EE964B;
+      background-color: #ED7597;
     }
   .btn--orange:hover {
-      background: linear-gradient(#EE964B, rgb(235, 109, 0));
+      background: linear-gradient(#ED7597, rgb(235, 149, 0));
     }
   .btn--dark-orange {
-      background-color: #F95738;
+      background-color: #54D6CB;
     }
   .btn--dark-orange:hover {
-      background: linear-gradient(#F95738, rgb(204, 34, 0));
+      background: linear-gradient(#54D6CB, #C4A9EF);
     }
   .btn--blue {
-      background-color: #0D3B66;
+      background-color: #5B80F0;
     }
   .btn--blue:hover {
-      background: linear-gradient(rgb(13, 80, 143), #0D3B66);
+      background: linear-gradient(rgb(13, 80, 143), #5B80F0);
     }
   .btn--yellow {
       background-color: #F4D35E;
