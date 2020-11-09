@@ -11,7 +11,17 @@ function dance_features() {
     register_nav_menu('footerMenuLocation', 'Footer Menu Location');
 }
 
+function dance_post_types() {
+    register_post_type('class', array(
+        'public' => true,
+        'labels' => array(
+            'name' => 'Classes'
+        )
+    ));
+}
+
 add_action('wp_enqueue_scripts', 'dancing_files');
 add_action('after_setup_theme', 'dance_features');
+add_action('init', 'dance_post_types');
 
 ?>
