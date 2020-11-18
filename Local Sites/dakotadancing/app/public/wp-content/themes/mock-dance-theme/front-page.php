@@ -23,8 +23,10 @@ while($homepageClasses->have_posts()) {
 $homepageClasses->the_post(); ?>
     <div class="event-summary">
       <a class="event-summary__date t-center" href="#">
-        <span class="event-summary__month">Mar</span>
-        <span class="event-summary__day">25</span>
+        <span class="event-summary__month"><?php 
+          $classDate = new DateTime(get_field('class_date'));
+          echo $classDate->format('M') ?></span>
+        <span class="event-summary__day"><?php echo $classDate->format('d') ?></span>
       </a>
       <div class="event-summary__content">
         <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>

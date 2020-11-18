@@ -20,7 +20,7 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li <?php if (is_page('about-me')) echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/about-me') ?>">About</a></li>
-            <li><a href="#">Classes</a></li>
+            <li <?php if (get_post_type() == 'class') echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('class'); ?>">Classes</a></li>
             <li <?php if (get_post_type() == 'post') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
           </ul>
         </nav>
