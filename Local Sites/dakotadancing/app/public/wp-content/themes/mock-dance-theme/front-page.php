@@ -11,12 +11,15 @@
 <div class="full-width-split group">
 <div class="full-width-split__one">
   <div class="full-width-split__inner">
-    <h2 class="headline headline--small-plus t-center">Upcoming Events</h2>
+    <h2 class="headline headline--small-plus t-center">Upcoming Classes</h2>
 
 <?php
 $homepageClasses = new WP_Query(array(
-  'posts_per_page' => 2,
-  'post_type' => 'class'
+  'posts_per_page' => -1,
+  'post_type' => 'class',
+  'meta_key' => 'class_date',
+  'orderby' => 'meta_value_num', 
+  'order' => 'ASC'
 ));
 
 while($homepageClasses->have_posts()) {
