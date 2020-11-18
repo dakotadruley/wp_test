@@ -14,12 +14,22 @@
     <h2 class="headline headline--small-plus t-center">Upcoming Classes</h2>
 
 <?php
+$today = date('Ymd');
+// custom query
 $homepageClasses = new WP_Query(array(
   'posts_per_page' => -1,
   'post_type' => 'class',
   'meta_key' => 'class_date',
   'orderby' => 'meta_value_num', 
-  'order' => 'ASC'
+  'order' => 'ASC',
+  'meta_query' => array(
+    array(
+      'key' => 'class_date',
+      'compare' => '>=',
+      'value' => $today,
+      'type' => 'numeric'
+    ),
+  )
 ));
 
 while($homepageClasses->have_posts()) {
@@ -39,7 +49,7 @@ $homepageClasses->the_post(); ?>
 <?php }
 ?>
 
-    <p class="t-center no-margin"><a href="#" class="btn btn--blue">View All Events</a></p>
+    <p class="t-center no-margin"><a href=<?php echo site_url('/class'); ?>" class="btn btn--blue">View All Classes</a></p>
   </div>
 </div>
 <div class="full-width-split__two">

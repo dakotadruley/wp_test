@@ -11,7 +11,25 @@ function dance_features() {
     register_nav_menu('footerMenuLocation', 'Footer Menu Location');
 }
 
+function dance_adjust_queries($query) {
+    if (!is_admin() AND is_post_type_archive('class') AND $query-> is_main_query()) {
+        $today = date('Ymd');
+        $query-> set('meta_key', 'class_date');
+        $query-> set('orderby', 'meta_value_num');
+        $query-> set('order', 'ASC');
+        $query-> set('meta_query', array(
+            array(
+              'key' => 'class_date',
+              'compare' => '>=',
+              'value' => $today,
+              'type' => 'numeric'
+            )
+            ));
+    }
+}
+
 add_action('wp_enqueue_scripts', 'dancing_files');
 add_action('after_setup_theme', 'dance_features');
+add_action('pre_get_posts', 'dance_adjust_queries');
 
 ?>
