@@ -15,8 +15,9 @@ function dance_adjust_queries($query) {
     if (!is_admin() AND is_post_type_archive('class') AND $query-> is_main_query()) {
         $today = date('Ymd');
         $query-> set('meta_key', 'class_date');
-        $query-> set('orderby', 'meta_value_num');
+        $query-> set('orderby', 'title');
         $query-> set('order', 'ASC');
+        $query-> set('posts_per_page', -1);
         $query-> set('meta_query', array(
             array(
               'key' => 'class_date',

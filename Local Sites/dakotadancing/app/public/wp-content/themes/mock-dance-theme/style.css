@@ -1509,80 +1509,12 @@ Version: 1.0
     }
   @media (min-width: 960px) {
   .full-width-split {
-      display: flex
+      display: flex;
+      justify-content: center;
+      padding: 30px;
   }
     }
-  .full-width-split__one {
-      flex: 1;
-      padding: 1.6rem 16px;
-    }
-  @media (min-width: 960px) {
-  .full-width-split__one {
-        padding: 40px
-    }
-    }
-  @media (min-width: 960px) {
-  .full-width-split__one .full-width-split__inner {
-          float: right
-      }
-    }
-  .full-width-split__two {
-      flex: 1;
-      background-color: #FAF0CA;
-      padding: 1.6rem 16px;
-    }
-  @media (min-width: 960px) {
-  .full-width-split__two {
-        padding: 40px
-    }
-    }
-  @media (min-width: 1350px) {
-  .full-width-split__inner {
-        width: 610px
-    }
-      }
-  .event-summary {
-    position: relative;
-    padding-left: 107px;
-    min-height: 77px;
-    padding-bottom: 1px;
-    margin-bottom: 20px;
-  }
-  .event-summary__title a {
-      color: #173f58;
-    }
-  .event-summary__date {
-      text-decoration: none;
-      display: block;
-      top: 0;
-      left: 0;
-      position: absolute;
-      padding: 14px 0 11px 0;
-      color: #FFF;
-      border-radius: 50%;
-      background-color: #0D3B66;
-      width: 80px;
-      line-height: 1;
-      transition: opacity .33s;
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, .22);
-    }
-  .event-summary__date:hover {
-      opacity: .75;
-    }
-  .event-summary__date--beige {
-      background-color: #F4D35E;
-    }
-  .event-summary__month {
-      display: block;
-      font-size: 1.5rem;
-      font-weight: 300;
-      text-transform: uppercase;
-    }
-  .event-summary__day {
-      display: block;
-      font-size: 2.02rem;
-      font-weight: 700;
-    }
+
   .page-links {
     position: relative;
     z-index: 1;
