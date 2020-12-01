@@ -12,7 +12,7 @@
 <body <?php body_class();  ?>>
     <header class="site-header">
     <div class="container">
-      <h1 class="school-logo-text float-left"><a href="<?php echo site_url() ?>"><strong>dakota</strong>_dancing</a></h1>
+      <h1 class="site-logo-text float-left"><a href="<?php echo site_url() ?>"><strong>dakota</strong>_dancing</a></h1>
       <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
       <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
       <div class="site-header__menu group">
@@ -21,7 +21,7 @@
             <li><a href="#">Home</a></li>
             <li <?php if (is_page('about-me')) echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/about-me') ?>">About</a></li>
             <li <?php if (get_post_type() == 'class') echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('class'); ?>">Classes</a></li>
-            <li <?php if (get_post_type() == 'post') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
+            <li <?php if (get_post_type() == 'post') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/blog'); ?>">Subscription</a></li>
           </ul>
         </nav>
         <div class="site-header__util">
