@@ -7,6 +7,7 @@ function dancing_files() {
 
 function dance_features() {
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
     register_nav_menu('headerMenuLocation', 'Header Menu Location');
     register_nav_menu('footerMenuLocation', 'Footer Menu Location');
 }
